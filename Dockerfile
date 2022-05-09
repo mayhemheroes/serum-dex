@@ -3,7 +3,7 @@ FROM rust as builder
 ADD . /serum-dex
 WORKDIR /serum-dex/dex/fuzz
 RUN apt-get update && apt-get install -y pkg-config build-essential python3-pip jq git
-RUN git apply /serum-dex/dex/patches/instructions.patch
+RUN cd /serum-dex && git apply --check /serum-dex/dex/patches/instructions.patch && git apply /serum-dex/dex/patches/instructions.patch
 
 RUN rustup toolchain add nightly
 RUN rustup default nightly
