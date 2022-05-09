@@ -1,0 +1,12 @@
+diff --git a/dex/src/instruction.rs b/dex/src/instruction.rs
+index 529f175..e2f70f9 100644
+--- a/dex/src/instruction.rs
++++ b/dex/src/instruction.rs
+@@ -1200,6 +1200,7 @@ mod fuzzing {
+                     .max_native_pc_qty_including_fees
+                     .try_into()?,
+                 order_type: value.order_type,
++                max_ts: 9999,
+                 client_order_id: value.client_order_id,
+                 self_trade_behavior: value.self_trade_behavior,
+                 limit: value.limit,
