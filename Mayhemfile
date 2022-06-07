@@ -1,4 +1,4 @@
-project: wgibbs15/serum-dex-mayhem
+project: serum-dex
 
 # Target name (should be unique within the project)
 target: serum-dex-fuzz
